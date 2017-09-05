@@ -1,0 +1,521 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: nhan
+ * Date: 10/17/16
+ * Time: 11:37 PM
+ */
+
+/**
+ * Checking ticket page
+ * Implement hook_menu()
+ */
+function booking_menu()
+{
+    $items = array();
+    $items['ticket/checking'] = array(
+        'access arguments' => array('access content'),
+        'page callback' => 'booking_ticket_checking',
+        'type' => MENU_CALLBACK
+    );
+    $items['booking/ticket'] = array(
+        'access arguments' => array('access content'),
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array(
+            'booking_ticket_form'
+        ),
+        'type' => MENU_CALLBACK
+    );
+    $items['ajax/ticket/checking'] = array(
+        'access arguments' => array('access content'),
+        'page callback' => 'booking_ticket_checking_ajax',
+        'type' => MENU_CALLBACK
+    );
+    $items['ajax/ticket/checking/fly'] = array(
+        'access arguments' => array('access content'),
+        'page callback' => 'booking_ticket_checking_ajax_js',
+        'type' => MENU_CALLBACK
+    );
+    $items['ajax/ticket/checking/vn'] = array(
+        'access arguments' => array('access content'),
+        'page callback' => 'booking_ticket_checking_ajax_vn',
+        'type' => MENU_CALLBACK
+    );
+    $items['ajax/ticket/checking/return'] = array(
+        'access arguments' => array('access content'),
+        'page callback' => 'booking_ticket_checking_ajax',
+        'type' => MENU_CALLBACK
+    );
+    $items['admin/config/booking'] = array(
+        'access arguments' => array('administrator'),
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array(
+            'booking_setting_form'
+        ),
+        'file' => 'includes/booking.admin.inc',
+        'type' => MENU_NORMAL_ITEM
+    );
+    $items['admin/dashboard'] = array(
+        'title' => 'Admin Dashboard ',
+        'description' => 'Control config for artline.',
+        'page callback' => 'booking_admin_dashboard',
+        'access arguments' => array('administer angiaphat'),
+    );
+    return $items;
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function booking_theme()
+{
+    $items = array();
+    $items['ticket_checking'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'ticket-checking',
+    );
+    $items['ticket_results'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'ticket-results',
+    );
+    $items['ticket_results_js'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'ticket-results-js',
+    );
+    $items['ticket_checking_result'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'ticket-checking-result',
+    );
+    $items['admin_dashboard'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'admin-dashboard',
+    );
+    return $items;
+}
+
+/**
+ * Implement booking_ticket_checking
+ */
+function booking_ticket_checking_ajax()
+{
+    $data = _build_data_booking();
+    $data['ticket_results'] = NULL;
+    $ticket_results = array();
+    if ($data['booking_data']['filter']['ticketType'] == 0) {
+        // $sources = array('VietJetAir', 'JetStar', 'VietnamAirlines');
+        $sources = array('VietJetAirB2B');
+        //  $sources = array('JetStar');
+        $data['ticket_results']['loai'] = 'VN';
+
+    } else {
+        $sources = array('AbacusB2B');
+        $data['ticket_results']['loai'] = 'QT';
+    }
+
+    //$sources = array('VietJetAir', 'JetStar');
+
+    foreach ($sources as $source) {
+        $data_filter = BookingHelper::build_data_filter($data['booking_data']['filter'], $source);
+        $ticket_results = array_merge($ticket_results, _search_ticket($data_filter));
+    }
+
+    if (!empty($ticket_results)) {
+        $data['ticket_results']['first_leg'] = $ticket_results;
+    }
+    $data['ticket_results']['type'] = $data['booking_data']['type'];
+
+    print render(theme('ticket_results', $data));
+    drupal_exit();
+
+}
+
+function booking_ticket_checking_ajax_js(){
+    $data = _build_data_booking();
+    $data['ticket_results'] = NULL;
+    $ticket_results = array();
+    if ($data['booking_data']['filter']['ticketType'] == 0) {
+        // $sources = array('VietJetAir', 'JetStar', 'VietnamAirlines');
+        //$sources = array('VietJetAir', 'VietnamAirlines');
+          $sources = array('JetStarB2B');
+           $data['ticket_results']['loai'] = 'VN';
+
+    }
+
+    //$sources = array('VietJetAir', 'JetStar');
+
+    foreach ($sources as $source) {
+        $data_filter = BookingHelper::build_data_filter($data['booking_data']['filter'], $source);
+        $ticket_results = array_merge($ticket_results, _search_ticket($data_filter));
+    }
+
+    if (!empty($ticket_results)) {
+        $data['ticket_results']['first_leg'] = $ticket_results;
+    }
+    $data['ticket_results']['type'] = $data['booking_data']['type'];
+
+    print render(theme('ticket_results_js', $data));
+    drupal_exit();
+}
+function booking_ticket_checking_ajax_vn(){
+    $data = _build_data_booking();
+    $data['ticket_results'] = NULL;
+    $ticket_results = array();
+    if ($data['booking_data']['filter']['ticketType'] == 0) {
+        // $sources = array('VietJetAir', 'JetStar', 'VietnamAirlines');
+        //$sources = array('VietJetAir', 'VietnamAirlines');
+          $sources = array('VietnamAirlines');
+           $data['ticket_results']['loai'] = 'VN';
+
+    }
+
+    //$sources = array('VietJetAir', 'JetStar');
+
+    foreach ($sources as $source) {
+        $data_filter = BookingHelper::build_data_filter($data['booking_data']['filter'], $source);
+        $ticket_results = array_merge($ticket_results, _search_ticket($data_filter));
+    }
+
+    if (!empty($ticket_results)) {
+        $data['ticket_results']['first_leg'] = $ticket_results;
+    }
+    $data['ticket_results']['type'] = $data['booking_data']['type'];
+
+    print render(theme('ticket_results_js', $data));
+    drupal_exit();
+}
+
+function booking_ticket_checking()
+{
+    return theme('ticket_checking_result');
+
+}
+
+/**
+ * Implementation of hook_block_info().
+ */
+function booking_block_info()
+{
+    $blocks = array();
+    $blocks['ticket_form'] = array('info' => t('Ticket Form'));
+    $blocks['ticket_results'] = array('info' => t('Kết quả'));
+    return $blocks;
+}
+
+/**
+ * Implementation of hook_block_view().
+ */
+function booking_block_view($delta = '')
+{
+    switch ($delta) {
+        case 'ticket_form':
+            $data = _build_data_booking();
+            return array(
+                'subject' => t('Ticket Form'),
+                'content' => theme('ticket_checking', $data),
+            );
+            break;
+        case 'ticket_results':
+            $data = _build_data_booking();
+            $data['ticket_results'] = NULL;
+            if (agp_getValue($data, 'booking_data.action') == 'search_ticket') {
+                $ticket_results = array();
+                $sources = array('VietJetAir', 'JetStar', 'VietnamAirlines');
+                foreach ($sources as $source) {
+                    $data_filter = BookingHelper::build_data_filter($data['booking_data']['filter'], $source);
+                    $ticket_results[] = _search_ticket($data_filter);
+                }
+                $round_trip = false;
+                //  $round_trip = agp_getValue($data_filter, 'RoundTrip', FALSE);
+
+
+                if (!empty($ticket_results)) {
+                    if (TRUE == $round_trip) {
+                        $num = floor(count($ticket_results) / 2);
+                        $data['ticket_results']['first_leg'] = BookingHelper::array_chop($ticket_results, $num);
+                        $data['ticket_results']['return_leg'] = $ticket_results;
+                    } else {
+                        $data['ticket_results']['first_leg'] = $ticket_results;
+                    }
+                }
+            }
+            return array(
+                'subject' => t('Kết quả'),
+                'content' => theme('ticket_results', $data),
+            );
+            break;
+    }
+}
+
+
+/**
+ * Build booking data
+ */
+function _build_data_booking()
+{
+    $data = array();
+    $data['booking_data'] = array();
+    $data['booking_data']['filter'] = array();
+    $data['booking_data']['action'] = 'no-action';
+
+    if (isset($_POST['data']) && !empty($_POST['data'])) {
+
+        $data['booking_data']['filter'] = $_POST['data'];
+        $data['booking_data']['action'] = $_POST['data']['booking_action'];
+        $data['booking_data']['type'] = $_POST['method'];
+    }
+
+    $data['booking_data']['max_people'] = array(
+        'adult' => variable_get('max_people_adult', 30),
+        'child_medium' => variable_get('max_people_child_medium', 30),
+        'child' => variable_get('max_people_child', 30),
+    );  
+
+
+    return $data;
+}
+
+/**
+ * Send request search
+ *
+ * @param $data_post
+ * @return mixed|null
+ * @throws \RemoteRestException
+ */
+function _search_ticket($data_post)
+{
+
+    $url = _booking_rest_url('oapi/airline/Flights/Find?$expand=TicketPriceDetails,Details,TicketOptions');
+    $username = variable_get('api_username', 'angiaphat247.vn');
+    $password = variable_get('api_password', 'ZVBNhfg4');
+    $response = BookingHelper::rest_http_post($url, $data_post, $username, $password);
+    if (empty($response) || !property_exists($response, 'value')) {
+        return NULL;
+    }
+    return $response->value;
+
+}
+
+/**
+ * sort data follow price
+ */
+function _sort_price($ticket)
+{
+    $price = array();
+    foreach ($ticket as $key => $row) {
+        $price[$key] = $row->Price;
+    }
+    array_multisort($price, SORT_ASC, $ticket);
+    return $ticket;
+}
+
+/**
+ * Get rest url
+ *
+ * @param $path
+ * @return string
+ */
+function _booking_rest_url($path)
+{
+    return variable_get('booking_rest_url', 'http://api.atvietnam.vn/') . $path;
+}
+
+function getPrice($price, $default_return_value = '', $type = null, $more = null, $int = 'VN')
+{
+    if ($type == 'tax') {
+        $price = $price + variable_get('price_more',50000);
+    }
+    if (!is_numeric($price)) {
+        return $default_return_value;
+    }
+    if($more && $int=='QT'){
+    $price = $price + 1000000;
+    }elseif($more && $int=='VN'){
+    $price = $price + 40000;
+    }
+    return number_format($price);
+}
+
+/**
+ * Import code
+ */
+function _get_code($code)
+{
+    $query = db_select('city_code', 'cc');
+    $query->fields('cc')->condition('code', $code);
+    $result = $query->execute()->fetchObject();
+    return $result->name;
+
+}
+
+/**
+ * Implements hook_permission().
+ */
+function booking_permission()
+{
+    return array(
+        'administer angiaphat' => array(
+            'title' => t('Administer angiaphat'),
+            'restrict access' => TRUE,
+        ),
+    );
+}
+
+/**
+ * admin dashboard
+ */
+function booking_admin_dashboard()
+{
+    drupal_add_css(drupal_get_path('module', 'booking') . '/assets/admin_panel/admin-panel.css');
+    return theme('admin_dashboard');
+}
+
+/**
+ * Implement hook_form
+ */
+function booking_ticket_form($form, &$form_state)
+{
+
+    if (isset($_POST['oneway_ticket']) && !empty($_POST['oneway_ticket'])) {
+        $form['oneway'] = array(
+            '#type' => 'hidden',
+            '#value' => $_POST['oneway_ticket'],
+        );
+    }
+
+    if (isset($_POST['twoway_ticket']) && !empty($_POST['twoway_ticket'])) {
+        $form['twoway'] = array(
+            '#type' => 'hidden',
+            '#value' => $_POST['twoway_ticket'],
+        );
+    }
+    $form['info'] = array(
+        '#markup' => '<div class="info-wrapper"><h4>Thông tin đặt vé.</h4><p>Vui lòng điền đầy đủ thông tin và gửi cho chúng tôi.</p></div>'
+    );
+    $form['name'] = array(
+        '#title' => t('Thông tin người đặt vé'),
+        '#type' => 'textfield',
+        '#required' => true
+    );
+    $form['email'] = array(
+        '#title' => t('Email người đặt vé'),
+        '#type' => 'textfield',
+        '#required' => true
+    );
+    $form['phone'] = array(
+        '#title' => t('Số điện thoại đặt vé'),
+        '#type' => 'textfield',
+        '#required' => true
+    );
+    $form['note'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Lời nhắn')
+    );
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Đặt vé')
+    );
+    return $form;
+}
+
+/**
+ * Implement hook_form_submit()
+ */
+function booking_ticket_form_submit($form, &$form_state)
+{
+    $data = $form_state['values'];
+    $node = new stdClass();
+    $node->type = 'booking';
+    $node->status = 1;
+    $node->language = LANGUAGE_NONE;
+    $node->uid = 5;
+    $node->created = REQUEST_TIME;
+    $node->title = $form_state['values']['name'];
+    $node->field_email[LANGUAGE_NONE][0]['value'] = $data['email'];
+    $node->field_telephone[LANGUAGE_NONE][0]['value'] = $data['phone'];
+    if (isset($data['note']) && !empty($data['note'])) {
+        $node->body[LANGUAGE_NONE][0]['value'] = $data['note'];
+    }
+    $oneway_info = '';
+    if (isset($form_state['input']['oneway']) && !empty($form_state['input']['oneway'])) {
+        $oneway = drupal_json_decode($form_state['input']['oneway']);
+        $oneway_info .= '*Thông tin chuyến bay lượt đi:';
+        $oneway_info .= '**Bay từ: ' . $oneway['FromPlace'] . ' đến ' . $oneway['ToPlace'];
+        $oneway_info .= '**Ngày: ' . BookingHelper::getDate($oneway['DepartTime']);
+        $oneway_info .= '**Thời gian bay: ' . BookingHelper::getTime($oneway['DepartTime']);
+        $oneway_info .= '**Hãng hàng không: ' . $oneway['Airline'];
+        $oneway_info .= '**Số chuyến bay: ' . $oneway['FlightNumber'];
+        $node->field_1wayinfo[LANGUAGE_NONE][0]['value'] = $oneway_info;
+        $node->field_price_1way[LANGUAGE_NONE][0]['value'] = ($oneway['TotalPrice'] + variable_get('price_more',50000));
+    }
+    $type = '1 lượt';
+    $twoway_info = '';
+    if (isset($form_state['input']['twoway']) && !empty($form_state['input']['twoway'])) {
+        $twoway = drupal_json_decode($form_state['input']['twoway']);
+        $twoway_info .= '*Thông tin chuyến bay lượt về:';
+        $twoway_info .= '**Bay từ: ' . $twoway['FromPlace'] . ' đến ' . $twoway['ToPlace'];
+        $twoway_info .= '**Ngày: ' . BookingHelper::getDate($twoway['DepartTime']);
+        $twoway_info .= '**Thời gian bay: ' . BookingHelper::getTime($twoway['DepartTime']);
+        $twoway_info .= '**Hãng hàng không: ' . $twoway['Airline'];
+        $twoway_info .= '**Số chuyến bay: ' . $twoway['FlightNumber'];
+        $node->field_2wayinfo[LANGUAGE_NONE][0]['value'] = $twoway_info;
+        $node->field_price_2way[LANGUAGE_NONE][0]['value'] = ($twoway['TotalPrice'] + variable_get('price_more',50000));
+        $node->field_ticket_type[LANGUAGE_NONE][0]['value'] = 'khứ hồi';
+        $type = 'khứ hồi';
+    }else{
+        $node->field_ticket_type[LANGUAGE_NONE][0]['value'] = '1 lượt';
+    }
+
+    node_save($node);
+    drupal_set_message(t('Bạn đã đặt vé thành công. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.'));
+    $params = array();
+    $to = variable_get('site_mail','nguyenmydien@angiaphat247.vn');
+    $params['subject'] = 'Anh/Chị '.$data['name'].' vừa đặt vé máy bay trên hệ thống.';
+    $info = '';
+    $info .='<p>Họ và tên: '.$data['name'].'</p>';
+    $info .='<p>Email: '.$data['email'].'</p>';
+    $info .='<p>Điện thoại: '.$data['phone'].'</p>';
+    $info .='<p>Loại chuyến bay: '.$type.'</p>';
+    $info .='<p>'.$oneway_info.'</p>';
+    $info .='<p>Giá lượt đi: '.number_format($oneway['TotalPrice'] + variable_get('price_more',50000)).'</p>';
+    if($type=='khứ hồi'){
+        $info .='<p>'.$twoway_info.'</p>';
+        $info .='<p>Giá lượt về: '.number_format($twoway['TotalPrice'] + variable_get('price_more',50000)).'</p>';
+    }
+    if(isset($data['note']) && !empty($data['note'])){
+        $info .='<p>Lời nhắn: '.$data['note'].'</p>';
+    }
+    $params['body'] = $info;
+
+    // Add an associative array about this desired attachment.
+    drupal_mail('booking', 'booking', $to, language_default(), $params, 'no-reply@angiaphat247.vn', TRUE);
+    drupal_goto('ticket/checking');
+}
+
+/**
+ * Implements hook_mail().
+ */
+/*
+ * 	drupal mail looks for a function that matches the first parameter _ mail to build the message
+ */
+function booking_mail($key, &$message, $params) {
+    switch ($key) {
+        case 'booking':
+            $headers = array(
+                'MIME-Version' => '1.0',
+                'Content-Type' => 'text/html; charset=UTF-8; format=flowed',
+                'Content-Transfer-Encoding' => '8Bit',
+                'X-Mailer' => 'Drupal'
+            );
+            foreach ($headers as $key => $value) {
+                $message['headers'][$key] = $value;
+            };
+            $message['subject'] = t($params['subject']);
+            $message['body'][] = $params['body'];
+            break;
+    }
+}

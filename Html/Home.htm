@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+
+    <script src="../js/jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+           $(".test a").click(function(){
+               var username = 'angiaphat247.vn';
+               var password = 'ZVBNhfg4';
+               var auth = btoa('angiaphat247.vn:ZVBNhfg4')
+               $.ajax
+               ({
+                   type: "POST",
+                   url: "http://api.atvietnam.vn/oapi/airline/Flights/Find?$expand=TicketPriceDetails,Details,TicketOptions",
+                   dataType: "json",
+                   contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                   xhrFields: {
+                       withCredentials: true
+                   },
+                   headers: {
+                       "Authorization": "Basic " + auth
+                   },
+                   async: false,
+                   data: '{"RoundTrip": true,"FromPlace": "SGN","ToPlace": "HAN","DepartDate": "2016-12-10T00:00:00.000","ReturnDate": "2016-12-15T00:00:00.000","CurrencyType": "VND","FlightType": "DirectAndContinue","Adult": 1,"Child": 0,"Infant": 0,"Sources": "VietnamAirlines"}',
+                   success: function (data){
+                      console.log(data);
+                   }
+               });
+
+               function make_base_auth(user, password) {
+                   var tok = user + ':' + password;
+                   var hash = btoa(tok);
+                   return "Basic " + hash;
+               }
+           });
+        });
+
+    </script>
+</head>
+
+<div class="test">
+    <a href="#">text ajax call</a>
+</div>
+
+</body><!-- Google Tag Manager --></html>

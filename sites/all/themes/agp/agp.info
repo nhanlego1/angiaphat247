@@ -1,0 +1,60 @@
+name = AGP
+description = An Gia Phat theme.
+core = 7.x
+engine = phptemplate
+
+;add css for template
+
+stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/font-awesome.min.css
+stylesheets[all][] = css/responsive.css
+stylesheets[all][] = css/stylesheet.css
+;stylesheets[all][] = css/jquery.bxslider.css
+stylesheets[all][] = css/superfish.css
+stylesheets[all][] = css/owl.carousel.css
+stylesheets[all][] = css/jquery.fancybox.css
+stylesheets[all][] = css/select2.css
+stylesheets[all][] = css/jquery.datetimepicker.min.css
+;add js to theme
+scripts[] = js/bootstrap.min.js
+scripts[] = js/superfish.js
+scripts[] = js/script.js
+scripts[] = js/owl.carousel.min.js
+;scripts[] = js/jquery.bxslider.js
+scripts[] = js/common.js
+scripts[] = js/camera.js
+scripts[] = js/TweenMax.min.js
+scripts[] = js/jquery.carouFredSel-6.2.1-packed.js
+scripts[] = js/jquery.fancybox.pack.js
+scripts[] = js/jquery.vide.min.js
+scripts[] = js/jquery.unveil.js
+scripts[] = js/jquery.elevatezoom.js
+scripts[] = js/cherry-fixed-parallax.js
+scripts[] = js/jquery.scrollmagic.min.js
+scripts[] = js/tm-stick-up.js
+scripts[] = js/TimelineMax.min.js
+scripts[] = js/select2.full.js
+scripts[] = js/booking.js
+scripts[] = js/custom.js
+scripts[] = js/jquery.datetimepicker.full.min.js
+
+;add region for template
+regions[highlighted] = Highlighted
+regions[booking] = Booking
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[content] = Content
+regions[content_top] = Content Top
+regions[content_second] = Content second
+regions[header] = Header
+regions[top] = Top
+regions[footer_top] = Footer Top
+regions[footer_bottom] = Footer Bottom
+regions[footer] = Footer
+regions[menu] = Menu
+regions[top_right] = Top Right
+regions[bottom_right] = Bottom Right
+regions[ads] = Ads
+
+;settings
+;settings[hide_content_in_front] = 1

@@ -14,6 +14,7 @@ function booking_menu()
 {
     $items = array();
     $items['ticket/checking'] = array(
+        'title' => 'Tìm vé',
         'access arguments' => array('access content'),
         'page callback' => 'booking_ticket_checking',
         'type' => MENU_CALLBACK
@@ -90,10 +91,20 @@ function booking_theme()
         'path' => drupal_get_path('module', 'booking') . '/theme',
         'template' => 'ticket-checking-result',
     );
+    $items['facebook'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'facebook',
+    );
     $items['admin_dashboard'] = array(
         'render element' => 'element',
         'path' => drupal_get_path('module', 'booking') . '/theme',
         'template' => 'admin-dashboard',
+    );
+    $items['contact_map'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'contact-map',
     );
     return $items;
 }
@@ -203,6 +214,8 @@ function booking_block_info()
     $blocks = array();
     $blocks['ticket_form'] = array('info' => t('Ticket Form'));
     $blocks['ticket_results'] = array('info' => t('Kết quả'));
+    $blocks['facebook'] = array('info' => t('Facebook'));
+    $blocks['contact_map'] = array('info' => t('Contact Map'));
     return $blocks;
 }
 
@@ -217,6 +230,18 @@ function booking_block_view($delta = '')
             return array(
                 'subject' => t('Ticket Form'),
                 'content' => theme('ticket_checking', $data),
+            );
+            break;
+        case 'facebook':
+            return array(
+                'subject' => t('Facebook'),
+                'content' => theme('facebook'),
+            );
+            break;
+        case 'contact_map':
+            return array(
+                'subject' => t('Contact Map'),
+                'content' => theme('contact_map'),
             );
             break;
         case 'ticket_results':
@@ -518,4 +543,20 @@ function booking_mail($key, &$message, $params) {
             $message['body'][] = $params['body'];
             break;
     }
+}
+
+/**
+ * @param $str
+ * @param int $limit
+ * @param bool $strip
+ * @return string
+ */
+function summary($str, $limit = 100, $strip = true)
+{
+    $str = ($strip == true) ? strip_tags($str) : $str;
+    if (strlen($str) > $limit) {
+        $str = substr($str, 0, $limit - 3);
+        return (substr($str, 0, strrpos($str, ' ')) . '...');
+    }
+    return trim($str);
 }

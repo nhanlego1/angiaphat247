@@ -10,32 +10,30 @@
 ?>
 
 <form id="bookingForm" action="/ticket/checking" method="post">
-    <div class="sect3">
-        <div class="inn1">
+    <div class="box-right-bottom">
+        <div class="inbound-outbound">
+            <select name="ticketType" class="tmSelect auto ticket-type"
+                    data-class="tmSelect tmSelect2">
 
-            <div class="controlHolder">
-                <select name="ticketType" class="tmSelect auto ticket-type"
-                        data-class="tmSelect tmSelect2">
-
-                   <option <?php isset($_POST['ticketType']) && $_POST['ticketType']==0 ? print 'selected': '' ?> value="0"><?php print t('Quốc nội') ?></option>
-                    <option <?php isset($_POST['ticketType']) && $_POST['ticketType']==1 ? print 'selected': '' ?> value="1"><?php print t('Quốc tế') ?></option>
-                </select>
-            </div>
+                <option <?php isset($_POST['ticketType']) && $_POST['ticketType'] == 0 ? print 'selected' : '' ?>
+                    value="0"><?php print t('Quốc nội') ?></option>
+                <option <?php isset($_POST['ticketType']) && $_POST['ticketType'] == 1 ? print 'selected' : '' ?>
+                    value="1"><?php print t('Quốc tế') ?></option>
+            </select>
         </div>
-    </div>
-    <div class="sect1">
-        <div class="controlHolder">
+
+        <div class="roundtrip">
 
             <div class="tmRadio">
                 <div class="lf">
-                    <input name="RoundTrip" type="radio"  value="false"
+                    <input name="RoundTrip" type="radio" value="false"
                            id="booking_type_1_way"
                            class="icheck" <?php print (isset($_POST['RoundTrip']) && $_POST['RoundTrip'] == 'false') ? 'checked="checked"' : '' ?>>
                     <span><?php print t('Một chiều') ?></span>
                     <div class="clear"></div>
                 </div>
                 <div class="rf">
-                    <input name="RoundTrip" type="radio"  value="true"
+                    <input name="RoundTrip" type="radio" value="true"
                            id="booking_type_2_way"
                            class="icheck" <?php print (isset($_POST['RoundTrip']) && $_POST['RoundTrip'] == 'true') ? 'checked="checked"' : 'checked="checked"' ?>>
                     <span><?php print t('Khứ hồi') ?></span>
@@ -44,14 +42,13 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="sect2">
-        <div class="controlHolder">
+
+        <div class="frontrip">
 
             <div class="tmInput">
                 <select name="FromPlace" class="frombookingFliter" required>
                     <option value="">Điểm đi</option>
-                    <?php isset($_POST['FromPlace'])? print '<option selected value="'.$_POST['FromPlace'].'">'._get_code($_POST['FromPlace']).'</option>': '' ?>
+                    <?php isset($_POST['FromPlace']) ? print '<option selected value="' . $_POST['FromPlace'] . '">' . _get_code($_POST['FromPlace']) . '</option>' : '' ?>
                     <optgroup label="Miền Nam">
                         <option value="SGN">Tp. Hồ Chí Minh(SGN)</option>
                         <option value="VCA">Cần Thơ(VCA)</option>
@@ -202,16 +199,16 @@
                 <input name="FromPlaceName" placeholder="Chiều đi" type="hidden" class="tooltip"
                        data-tooltip-content="#tooltip_content"
                        id="bookingFilterFrom"
-                       value="<?php isset($_POST['FromPlace']) ? print $_POST['FromPlace']: '' ?>">
+                       value="<?php isset($_POST['FromPlace']) ? print $_POST['FromPlace'] : '' ?>">
 
             </div>
         </div>
-        <div class="controlHolder">
+        <div class="totrip">
 
             <div class="tmInput toplace">
                 <select name="ToPlace" class="tobookingFliter" required>
                     <option value="">Điểm đến</option>
-                    <?php isset($_POST['ToPlace']) ? print '<option selected value="'.$_POST['ToPlace'].'">'._get_code($_POST['ToPlace']).'</option>': '' ?>
+                    <?php isset($_POST['ToPlace']) ? print '<option selected value="' . $_POST['ToPlace'] . '">' . _get_code($_POST['ToPlace']) . '</option>' : '' ?>
                     <optgroup label="Miền Nam">
                         <option value="SGN">Tp. Hồ Chí Minh(SGN)</option>
                         <option value="VCA">Cần Thơ(VCA)</option>
@@ -360,36 +357,36 @@
                 </select>
                 <input name="ToPlaceName" placeholder="Chiều đến" type="hidden" class="tooltip"
                        data-tooltip-content="#tooltip_content" id="bookingFilterTo"
-                       value="<?php isset($_POST['ToPlace']) ? print $_POST['ToPlace']: '' ?>" >
+                       value="<?php isset($_POST['ToPlace']) ? print $_POST['ToPlace'] : '' ?>">
 
             </div>
         </div>
-    </div>
-
-    <div class="sect4">
-        <div class="controlHolder"><label class="tmDatepicker">
-                <input type="text" name="DepartDate" placeholder="Ngày đi"
-                       id="booking_check_in" class="hasDatepicker"
-                       value="<?php isset($_POST['DepartDate']) ? print $_POST['DepartDate']: '' ?>" required>
-            </label></div>
-
-        <div class="controlHolder"><label class="tmDatepicker">
-                <input type="text" name="ReturnDate" placeholder="Ngày về"
-                       id="booking_check_out" class="hasDatepicker"
-                       value="<?php isset($_POST['ReturnDate']) ? print $_POST['ReturnDate']: '' ?>" required>
-            </label></div>
         <div class="clear"></div>
     </div>
+    <div class="box-language">
 
-    <div class="sect3">
-        <div class="inn1">
+        <div class="datetime">
+            <label class="tmDatepicker">
+                <input type="text" name="DepartDate" placeholder="Ngày đi"
+                       id="booking_check_in" class="hasDatepicker"
+                       value="<?php isset($_POST['DepartDate']) ? print $_POST['DepartDate'] : '' ?>" required>
+            </label></div>
+
+        <div class="datetime">
+            <label class="tmDatepicker">
+                <input type="text" name="ReturnDate" placeholder="Ngày về"
+                       id="booking_check_out" class="hasDatepicker"
+                       value="<?php isset($_POST['ReturnDate']) ? print $_POST['ReturnDate'] : '' ?>" required>
+            </label></div>
+
+        <div class="optionMore">
 
             <div class="controlHolder">
                 <select name="Adult" class="tmSelect auto"
                         data-class="tmSelect tmSelect2">
 
                     <?php $i = 1;
-                    $current = isset($_POST['Adult']) ? $_POST['Adult']: 1;
+                    $current = isset($_POST['Adult']) ? $_POST['Adult'] : 1;
                     $max = agp_getValue($booking_data, 'max_people.adult', 30) ?>
                     <?php while ($i <= $max): ?>
 
@@ -401,14 +398,14 @@
                 </select>
             </div>
         </div>
-        <div class="inn1">
+        <div class="optionMore">
             <!--      <span>--><?php //print t('Trẻ em 2T - 11T') ?><!--</span>-->
             <div class="controlHolder"><select name="Child"
                                                class="tmSelect auto"
                                                data-class="tmSelect tmSelect2">
                     <option>Trẻ em</option>
                     <?php $i = 1;
-                    $current = isset($_POST['Child']) ? $_POST['Child']: 0;
+                    $current = isset($_POST['Child']) ? $_POST['Child'] : 0;
                     $max = agp_getValue($booking_data, 'max_people.child_medium', 30) ?>
                     <?php while ($i <= $max): ?>
                         <option <?php print 'value="' . $i . '"';
@@ -420,13 +417,13 @@
             </div>
 
         </div>
-        <div class="inn1">
+        <div class="optionMore">
             <div class="controlHolder"><select name="Infant"
                                                class="tmSelect auto"
                                                data-class="tmSelect tmSelect2">
                     <option>Em bé</option>
                     <?php $i = 1;
-                    $current = isset($_POST['Infant']) ? $_POST['Infant']: 0;
+                    $current = isset($_POST['Infant']) ? $_POST['Infant'] : 0;
                     $max = agp_getValue($booking_data, 'max_people.child', 30) ?>
                     <?php while ($i <= $max): ?>
                         <option <?php print 'value="' . $i . '"';
@@ -437,12 +434,12 @@
                 </select>
             </div>
         </div>
-    </div>
 
-    <div class="clear"></div>
-    <input type="hidden" value="search_ticket" name="booking_action">
-    <button class="subm" id="btn-search-ticket"><?php print t('Tìm vé rẻ') ?></button>
-    <div class="clear"></div>
+        <div class="clear"></div>
+        <input type="hidden" value="search_ticket" name="booking_action">
+        <button class="subm" id="btn-search-ticket"><?php print t('Tìm vé rẻ') ?></button>
+        <div class="clear"></div>
+    </div>
 </form>
 <script>
     jQuery(document).ready(function () {
@@ -451,11 +448,11 @@
         bookingHelper.initChooseProvice();
         bookingHelper.initICheck();
         bookingHelper.handlerEvent();
-        jQuery(".frombookingFliter").on('change',function(){
-           var val = jQuery(this).val();
+        jQuery(".frombookingFliter").on('change', function () {
+            var val = jQuery(this).val();
             jQuery("#bookingFilterFrom").val(val);
         });
-        jQuery(".tobookingFliter").on('change',function(){
+        jQuery(".tobookingFliter").on('change', function () {
             var val = jQuery(this).val();
             jQuery("#bookingFilterTo").val(val);
         });

@@ -3496,7 +3496,7 @@ label {
     padding: 2px;
     border: 1px solid #c4c4c4;
 }
-.fivestar-widget .form-item-vote .description{
+.fivestar-static-item .description{
     display: none;
 }
 ul.list{

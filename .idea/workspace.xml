@@ -2,76 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12c7ae42-6f21-493a-b48b-acfba7f42e7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results-booking.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results-vn.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--new-products--block.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--new-products--block.tpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--special-products--block.tpl.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/all/themes/agp/css/jquery.fancybox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/0006207_vitamin-e-400iu-chong-lao-hoa-da-bao-ve-tim-mach.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/16002938_1658918324122102_6376250921671344621_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/16114341_1658948510785750_5533423385867563379_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/16807623_1703557732991494_5454168268529990114_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/16807771_1699964856684115_4632614213987497171_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/17522754_1461634307201100_427801012606585929_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/17553799_1456541464377051_5037323783217840689_n_4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/17760010_1461634287201102_5531688024803866385_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/19251132_1347498655366178_1008343302_n_0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20228815_1575370982494098_3893395413725895085_n_2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20294380_1573288006035729_696693387920870211_n_0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20431737_1581025371928659_2878192535010596972_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20479664_1948303785183553_8635078029071136124_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20479666_1270609046382504_2385951076531053134_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20624309_1387556241360419_1253245886_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20624327_1387555961360447_1072765827_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20750725_1961138083900123_526347770_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/51oLsuocnFL.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/ACID.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Capture.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Capture_0.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Capture_1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Chia.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Coast.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/SL1500_.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Spring.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Swiss-Collagen-Complex.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Vital C queous.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/Vitamin-C-1000mg-500v.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/collagen+c-390.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/dove.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/ginkgo-biloba-puritan-228x228.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/hs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/hs_0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/panten 1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/similac.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/soy-1_45-front-d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/sắt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/vitamin C.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/1376573_723941090955664_654065120_n.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/1376573_723941090955664_654065120_n.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/17553799_1456541464377051_5037323783217840689_n.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/17553799_1456541464377051_5037323783217840689_n.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/18342164_1827440487269884_2387781922656301206_n.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/18342164_1827440487269884_2387781922656301206_n.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20217307_1373990292717014_2028463100_n.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20217307_1373990292717014_2028463100_n.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20621174_1275495919227150_3234349120607166826_n_1.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20621174_1275495919227150_3234349120607166826_n_1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20638597_1589608751070321_6791322685830236553_n_0.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20638597_1589608751070321_6791322685830236553_n_0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20663867_1588469527850910_8718363260745617060_n.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20663867_1588469527850910_8718363260745617060_n.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20663919_1588418831189313_4550267214084602760_n_0.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20663919_1588418831189313_4550267214084602760_n_0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20668536_1957621800918418_163210122_n.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20668536_1957621800918418_163210122_n.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20731093_1956360287711236_417186350_n.jpg" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/20731093_1956360287711236_417186350_n.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/modules/image/sample.png" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/styles/product_thum/public/modules/image/sample.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/booking/assets/css/booking.css" afterPath="$PROJECT_DIR$/sites/all/modules/custom/booking/assets/css/booking.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/booking/booking.module" afterPath="$PROJECT_DIR$/sites/all/modules/custom/booking/booking.module" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-checking.tpl.php" afterPath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-checking.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results.tpl.php" afterPath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/agp.info" afterPath="$PROJECT_DIR$/sites/all/themes/agp/agp.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" afterPath="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css" afterPath="$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/js/custom.js" afterPath="$PROJECT_DIR$/sites/all/themes/agp/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/js/script.js" afterPath="$PROJECT_DIR$/sites/all/themes/agp/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/template.php" afterPath="$PROJECT_DIR$/sites/all/themes/agp/template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" />
     </list>
     <ignored path="angiaphat247.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="3502" column="20" selection-start-line="3502" selection-start-column="20" selection-end-line="3502" selection-end-column="20" />
+            <state relative-caret-position="465">
+              <caret line="3498" column="21" selection-start-line="3498" selection-start-column="21" selection-end-line="3498" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -142,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booking.module" pinned="false" current-in-tab="true">
+      <file leaf-file-name="booking.module" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/booking/booking.module">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -213,8 +144,8 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-checking.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results-booking.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/assets/css/booking.css" />
-        <option value="$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/booking.module" />
+        <option value="$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css" />
       </list>
     </option>
   </component>
@@ -717,12 +648,12 @@
       <option name="presentableId" value="Default" />
       <updated>1504790046696</updated>
       <workItem from="1504790048998" duration="2608000" />
-      <workItem from="1504879842567" duration="34164000" />
+      <workItem from="1504879842567" duration="34407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36772000" />
+    <option name="totallyTimeSpent" value="37015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -1195,14 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="3502" column="20" selection-start-line="3502" selection-start-column="20" selection-end-line="3502" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/booking/booking.module">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1211,6 +1134,14 @@
             <marker date="1505155315000" expanded="true" signature="13510:13607" ph="..." />
             <marker date="1505155315000" expanded="true" signature="13546:13552" ph=" " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="3498" column="21" selection-start-line="3498" selection-start-column="21" selection-end-line="3498" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

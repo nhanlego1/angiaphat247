@@ -1148,7 +1148,7 @@ h2.price {
     line-height: 120%;
     color: #f34d63;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 22px;
     padding-bottom: 10px;
 }
 
@@ -1182,7 +1182,7 @@ td .price, .price b {
 
 .price-old {
     color: #bcbcbc;
-    font-size: 16px;
+    font-size: 12px;
     text-decoration: line-through;
     margin-left: 5px;
     font-weight: 400;
@@ -2062,7 +2062,8 @@ div.navigations a:hover {
 }
 
 #content .box.specials .product-layout, #content .box.latest .product-layout {
-    margin: 0 -15px
+    margin: 0 -15px;
+    opacity: inherit!important;
 }
 
 .review-form-title h3:hover {
@@ -3446,7 +3447,7 @@ label {
 .banners .views-row-last{
     margin-top: 30px;
 }
-.advertising h2{
+.box_html.advertising h2{
     font-size: 34px;
     text-transform: uppercase;
     color: #fff;
@@ -3494,4 +3495,10 @@ label {
     text-align: center;
     padding: 2px;
     border: 1px solid #c4c4c4;
+}
+.fivestar-widget .form-item-vote .description{
+    display: none;
+}
+ul.list{
+    padding-left: 0;
 }

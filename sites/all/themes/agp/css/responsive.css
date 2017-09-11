@@ -3,7 +3,10 @@
 
 @media (min-width: 1200px) {
     .box .product-layout ul li {
-        min-height: 416px
+        min-height: 447px
+    }
+    #content .box.specials .product-thumb, #content .box.latest .product-thumb {
+        min-height: 467px;
     }
 
     .box-right {
@@ -436,6 +439,8 @@
     .box-right-bottom {
         border: 0;
         float: right;
+        padding: 5px 5px 5px 10px;
+        width: 100%;
     }
 
     .box_html .box-adv {

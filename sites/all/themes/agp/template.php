@@ -43,8 +43,14 @@ function agp_breadcrumb($variables)
     //custom breadcrumb
     //check langding page
     $custom_bread = array();
-
+    $node = menu_get_object('node');
     $breadcrumbs[] = '<li><a href="' . url('<front>') . '" title="HOME" target="_self"><i class="fa fa-home"></i></a></li>';
+
+    if(isset($node) && $node->type=='product'){
+        $term = taxonomy_term_load($node->field_category[LANGUAGE_NONE][0]['tid']);
+        $breadcrumbs[] = '<li><a href="' . url('taxonomy/term/'.$term->tid) . '" title="'.$term->name.'" target="_self">'.$term->name.'</a></li>';
+    }
+
     $breadcrumbs[] = $custom_bread[] = '<li><a href="' . url($_GET['q']) . '" title="" target="_self">'.drupal_get_title().'</a></li>';
 
 

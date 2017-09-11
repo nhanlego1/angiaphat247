@@ -9,15 +9,15 @@
 
 ?>
 
-<form id="bookingForm" action="/ticket/checking" method="post">
+<form id="bookingForm" action="/ticket/checking" method="get">
     <div class="box-right-bottom">
         <div class="inbound-outbound">
             <select name="ticketType" class="tmSelect auto ticket-type"
                     data-class="tmSelect tmSelect2">
 
-                <option <?php isset($_POST['ticketType']) && $_POST['ticketType'] == 0 ? print 'selected' : '' ?>
+                <option <?php isset($_GET['ticketType']) && $_GET['ticketType'] == 0 ? print 'selected' : '' ?>
                     value="0"><?php print t('Quốc nội') ?></option>
-                <option <?php isset($_POST['ticketType']) && $_POST['ticketType'] == 1 ? print 'selected' : '' ?>
+                <option <?php isset($_GET['ticketType']) && $_GET['ticketType'] == 1 ? print 'selected' : '' ?>
                     value="1"><?php print t('Quốc tế') ?></option>
             </select>
         </div>
@@ -28,14 +28,14 @@
                 <div class="lf">
                     <input name="RoundTrip" type="radio" value="false"
                            id="booking_type_1_way"
-                           class="icheck" <?php print (isset($_POST['RoundTrip']) && $_POST['RoundTrip'] == 'false') ? 'checked="checked"' : '' ?>>
+                           class="icheck" <?php print (isset($_GET['RoundTrip']) && $_GET['RoundTrip'] == 'false') ? 'checked="checked"' : '' ?>>
                     <span><?php print t('Một chiều') ?></span>
                     <div class="clear"></div>
                 </div>
                 <div class="rf">
                     <input name="RoundTrip" type="radio" value="true"
                            id="booking_type_2_way"
-                           class="icheck" <?php print (isset($_POST['RoundTrip']) && $_POST['RoundTrip'] == 'true') ? 'checked="checked"' : 'checked="checked"' ?>>
+                           class="icheck" <?php print (isset($_GET['RoundTrip']) && $_GET['RoundTrip'] == 'true') ? 'checked="checked"' : 'checked="checked"' ?>>
                     <span><?php print t('Khứ hồi') ?></span>
                     <div class="clear"></div>
 
@@ -48,7 +48,7 @@
             <div class="tmInput">
                 <select name="FromPlace" class="frombookingFliter" required>
                     <option value="">Điểm đi</option>
-                    <?php isset($_POST['FromPlace']) ? print '<option selected value="' . $_POST['FromPlace'] . '">' . _get_code($_POST['FromPlace']) . '</option>' : '' ?>
+                    <?php isset($_GET['FromPlace']) ? print '<option selected value="' . $_GET['FromPlace'] . '">' . _get_code($_GET['FromPlace']) . '</option>' : '' ?>
                     <optgroup label="Miền Nam">
                         <option value="SGN">Tp. Hồ Chí Minh(SGN)</option>
                         <option value="VCA">Cần Thơ(VCA)</option>
@@ -199,7 +199,7 @@
                 <input name="FromPlaceName" placeholder="Chiều đi" type="hidden" class="tooltip"
                        data-tooltip-content="#tooltip_content"
                        id="bookingFilterFrom"
-                       value="<?php isset($_POST['FromPlace']) ? print $_POST['FromPlace'] : '' ?>">
+                       value="<?php isset($_GET['FromPlace']) ? print $_GET['FromPlace'] : '' ?>">
 
             </div>
         </div>
@@ -208,7 +208,7 @@
             <div class="tmInput toplace">
                 <select name="ToPlace" class="tobookingFliter" required>
                     <option value="">Điểm đến</option>
-                    <?php isset($_POST['ToPlace']) ? print '<option selected value="' . $_POST['ToPlace'] . '">' . _get_code($_POST['ToPlace']) . '</option>' : '' ?>
+                    <?php isset($_GET['ToPlace']) ? print '<option selected value="' . $_GET['ToPlace'] . '">' . _get_code($_GET['ToPlace']) . '</option>' : '' ?>
                     <optgroup label="Miền Nam">
                         <option value="SGN">Tp. Hồ Chí Minh(SGN)</option>
                         <option value="VCA">Cần Thơ(VCA)</option>
@@ -357,7 +357,7 @@
                 </select>
                 <input name="ToPlaceName" placeholder="Chiều đến" type="hidden" class="tooltip"
                        data-tooltip-content="#tooltip_content" id="bookingFilterTo"
-                       value="<?php isset($_POST['ToPlace']) ? print $_POST['ToPlace'] : '' ?>">
+                       value="<?php isset($_GET['ToPlace']) ? print $_GET['ToPlace'] : '' ?>">
 
             </div>
         </div>
@@ -369,14 +369,14 @@
             <label class="tmDatepicker">
                 <input type="text" name="DepartDate" placeholder="Ngày đi"
                        id="booking_check_in" class="hasDatepicker"
-                       value="<?php isset($_POST['DepartDate']) ? print $_POST['DepartDate'] : '' ?>" required>
+                       value="<?php isset($_GET['DepartDate']) ? print $_GET['DepartDate'] : '' ?>" required>
             </label></div>
 
         <div class="datetime">
             <label class="tmDatepicker">
                 <input type="text" name="ReturnDate" placeholder="Ngày về"
                        id="booking_check_out" class="hasDatepicker"
-                       value="<?php isset($_POST['ReturnDate']) ? print $_POST['ReturnDate'] : '' ?>" required>
+                       value="<?php isset($_GET['ReturnDate']) ? print $_GET['ReturnDate'] : '' ?>" required>
             </label></div>
 
         <div class="optionMore">
@@ -386,7 +386,7 @@
                         data-class="tmSelect tmSelect2">
 
                     <?php $i = 1;
-                    $current = isset($_POST['Adult']) ? $_POST['Adult'] : 1;
+                    $current = isset($_GET['Adult']) ? $_GET['Adult'] : 1;
                     $max = agp_getValue($booking_data, 'max_people.adult', 30) ?>
                     <?php while ($i <= $max): ?>
 
@@ -405,7 +405,7 @@
                                                data-class="tmSelect tmSelect2">
                     <option>Trẻ em</option>
                     <?php $i = 1;
-                    $current = isset($_POST['Child']) ? $_POST['Child'] : 0;
+                    $current = isset($_GET['Child']) ? $_GET['Child'] : 0;
                     $max = agp_getValue($booking_data, 'max_people.child_medium', 30) ?>
                     <?php while ($i <= $max): ?>
                         <option <?php print 'value="' . $i . '"';
@@ -423,7 +423,7 @@
                                                data-class="tmSelect tmSelect2">
                     <option>Em bé</option>
                     <?php $i = 1;
-                    $current = isset($_POST['Infant']) ? $_POST['Infant'] : 0;
+                    $current = isset($_GET['Infant']) ? $_GET['Infant'] : 0;
                     $max = agp_getValue($booking_data, 'max_people.child', 30) ?>
                     <?php while ($i <= $max): ?>
                         <option <?php print 'value="' . $i . '"';

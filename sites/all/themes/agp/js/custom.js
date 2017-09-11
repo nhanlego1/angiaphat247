@@ -423,7 +423,7 @@
 
     function _initFormTicket() {
         $(".depart-info .detail a").each(function () {
-            $(this).live('click',function (event) {
+            $(this).on('click',function (event) {
                 event.preventDefault();
                 $(this).parent().next().toggle();
             });
@@ -438,7 +438,7 @@
     }
     function _initFormTicketJS() {
         $(".depart-info li.jetstar-wrapper .detail a").each(function () {
-            $(this).live('click',function (event) {
+            $(this).on('click',function (event) {
                 event.preventDefault();
                 $(this).parent().next().toggle();
             });
@@ -453,7 +453,7 @@
     }
     function _initFormTicketJS2() {
         $(".return-info li.jetstar-wrapper .detail a").each(function () {
-            $(this).live('click',function (event) {
+            $(this).on('click',function (event) {
                 event.preventDefault();
                 $(this).parent().next().toggle();
             });
@@ -467,8 +467,8 @@
 
     }
     function _initFormTicketvn() {
-        $(".depart-info li.jetstar-wrapper .detail a").each(function () {
-            $(this).live('click',function (event) {
+        $(".depart-info li.vn-wrapper .detail a").each(function () {
+            $(this).on('click',function (event) {
                 event.preventDefault();
                 $(this).parent().next().toggle();
             });
@@ -482,8 +482,8 @@
 
     }
     function _initFormTicketvn2() {
-        $(".return-info li.jetstar-wrapper .detail a").each(function () {
-            $(this).live('click',function (event) {
+        $(".return-info li.vn-wrapper .detail a").each(function () {
+            $(this).on('click',function (event) {
                 event.preventDefault();
                 $(this).parent().next().toggle();
             });
@@ -499,7 +499,7 @@
 
     function _initFormTicket2() {
         $(".return-info .detail a").each(function () {
-            $(this).live('click',function (event) {
+            $(this).on('click',function (event) {
                 event.preventDefault();
                 $(this).parent().next().toggle();
             });

@@ -2,7 +2,9 @@
 /*custom mixins */
 /*end custom mixins */
 /* Control Holder */
-
+ul li{
+    list-style: none;
+}
 .box-right-bottom .inbound-outbound select{
     background-color: #fff;
     float: left;
@@ -824,12 +826,14 @@ table.tbl-ticket-result .depart-time {
 .title-header-warapper {
     width: 100%;
     clear: both;
+    padding: 0;
 }
 
 ul.title-header {
     width: 100%;
     background-color: rgba(254, 191, 43, 0.91) !important;
     height: 40px;
+    padding-left: 0;
 }
 
 ul.title-header li {
@@ -850,6 +854,7 @@ ul.tbl-ticket-result {
     float: left;
     width: 100%;
     margin-bottom: 30px;
+    padding: 0;
 }
 
 li.detail-wrapper {
@@ -897,14 +902,14 @@ li.detail-wrapper:first-child {
     font-size: 14px;
 }
 
-.price {
+.ticket-result .price {
     width: 18%;
     float: left;
     height: 40px;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 10px;
-    color: #f55753;
+    color: #f34d63;
     font-weight: bold;
     font-size: 21px;
 }
@@ -922,7 +927,8 @@ li.detail-wrapper ul {
     width: 100%;
     clear: both;
     display: none;
-    background: #eee;
+    background: #fff;
+    padding: 0;
 }
 
 li.detail-wrapper ul li {
@@ -1046,6 +1052,7 @@ li.tax {
     padding-bottom: 10px;
     margin-bottom: 2px !important;
     margin-bottom: 0px !important;
+    color: rgba(254, 191, 43, 0.91);
 }
 
 li.total-amount {
@@ -1056,6 +1063,7 @@ li.total-amount {
     width: 90% !important;
     padding-bottom: 10px;
     margin-top: 0px !important;
+    color: #f34d63;
 }
 
 .horizontal-nav select:nth-of-type(2), .horizontal-nav select:last-child {
@@ -1099,6 +1107,35 @@ li.total-amount {
 }
 .select2-selection__arrow{
     display: none;
+}
+#booking-ticket-form label{
+    width: 10%;
+}
+
+#booking-ticket-form #edit-submit {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f34d63;
+    padding: 15px 30px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 0;
+}
+.info-wrapper h3 {
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 0 0 30px;
+    text-transform: none;
+    padding:10px 20px;
+    font-weight: bold;
+    background-color: #369946;
 }
 /*==================================RESPONSIVE LAYOUTS===============================================*/
 @media only screen and (max-width: 1024px) {
@@ -1499,7 +1536,7 @@ li.total-amount {
     position: fixed;
     bottom: 0px;
     z-index: 9999;
-    right: 40%;
+    right: 25%;
     width: 50%;
     color: #fff;
 }

@@ -20,6 +20,7 @@ function booking_menu()
         'type' => MENU_CALLBACK
     );
     $items['booking/ticket'] = array(
+        'title'=>'Đặt vé online',
         'access arguments' => array('access content'),
         'page callback' => 'drupal_get_form',
         'page arguments' => array(
@@ -81,10 +82,20 @@ function booking_theme()
         'path' => drupal_get_path('module', 'booking') . '/theme',
         'template' => 'ticket-results',
     );
+    $items['ticket_results_booking'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'ticket-results-booking',
+    );
     $items['ticket_results_js'] = array(
         'render element' => 'element',
         'path' => drupal_get_path('module', 'booking') . '/theme',
         'template' => 'ticket-results-js',
+    );
+    $items['ticket_results_vn'] = array(
+        'render element' => 'element',
+        'path' => drupal_get_path('module', 'booking') . '/theme',
+        'template' => 'ticket-results-vn',
     );
     $items['ticket_checking_result'] = array(
         'render element' => 'element',
@@ -196,7 +207,7 @@ function booking_ticket_checking_ajax_vn(){
     }
     $data['ticket_results']['type'] = $data['booking_data']['type'];
 
-    print render(theme('ticket_results_js', $data));
+    print render(theme('ticket_results_vn', $data));
     drupal_exit();
 }
 
@@ -404,12 +415,18 @@ function booking_admin_dashboard()
  */
 function booking_ticket_form($form, &$form_state)
 {
-
+    $oneway = false;
+    $twoway = false;
+    $output = '';
     if (isset($_POST['oneway_ticket']) && !empty($_POST['oneway_ticket'])) {
         $form['oneway'] = array(
             '#type' => 'hidden',
             '#value' => $_POST['oneway_ticket'],
         );
+        $oneway = drupal_json_decode($_POST['oneway_ticket']);
+        $one =theme('ticket_results_booking',array('data'=>$oneway,'type'=>'oneway'));
+        $output .= render($one);
+       // dsm($oneway);
     }
 
     if (isset($_POST['twoway_ticket']) && !empty($_POST['twoway_ticket'])) {
@@ -417,22 +434,28 @@ function booking_ticket_form($form, &$form_state)
             '#type' => 'hidden',
             '#value' => $_POST['twoway_ticket'],
         );
+        $twoway = drupal_json_decode($_POST['twoway_ticket']);
+        $two= theme('ticket_results_booking',array('data'=>$twoway,'type'=>'twoway'));
+        $output .= render($two);
+    }
+    if(!$oneway && !$twoway){
+        drupal_goto('<front>');
     }
     $form['info'] = array(
-        '#markup' => '<div class="info-wrapper"><h4>Thông tin đặt vé.</h4><p>Vui lòng điền đầy đủ thông tin và gửi cho chúng tôi.</p></div>'
+        '#markup' => '<div class="info-wrapper"><h3>Chi Tiết Vé.</h3>'.$output.'<p>&nbsp;</p><h3>Thông tin liên hệ.</h3></div>'
     );
     $form['name'] = array(
-        '#title' => t('Thông tin người đặt vé'),
+        '#title' => t('Họ và Tên'),
         '#type' => 'textfield',
         '#required' => true
     );
     $form['email'] = array(
-        '#title' => t('Email người đặt vé'),
+        '#title' => t('Email'),
         '#type' => 'textfield',
         '#required' => true
     );
     $form['phone'] = array(
-        '#title' => t('Số điện thoại đặt vé'),
+        '#title' => t('Số điện thoại'),
         '#type' => 'textfield',
         '#required' => true
     );
@@ -518,7 +541,7 @@ function booking_ticket_form_submit($form, &$form_state)
 
     // Add an associative array about this desired attachment.
     drupal_mail('booking', 'booking', $to, language_default(), $params, 'no-reply@angiaphat247.vn', TRUE);
-    drupal_goto('ticket/checking');
+    drupal_goto('<front>');
 }
 
 /**

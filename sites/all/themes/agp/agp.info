@@ -12,13 +12,12 @@ stylesheets[all][] = css/stylesheet.css
 ;stylesheets[all][] = css/jquery.bxslider.css
 stylesheets[all][] = css/superfish.css
 stylesheets[all][] = css/owl.carousel.css
-stylesheets[all][] = css/jquery.fancybox.css
+stylesheets[all][] = css/fancybox/jquery.fancybox.css
 stylesheets[all][] = css/select2.css
 stylesheets[all][] = css/jquery.datetimepicker.min.css
 ;add js to theme
 scripts[] = js/bootstrap.min.js
 scripts[] = js/superfish.js
-scripts[] = js/script.js
 scripts[] = js/owl.carousel.min.js
 ;scripts[] = js/jquery.bxslider.js
 scripts[] = js/common.js
@@ -37,6 +36,7 @@ scripts[] = js/select2.full.js
 scripts[] = js/booking.js
 scripts[] = js/custom.js
 scripts[] = js/jquery.datetimepicker.full.min.js
+scripts[] = js/script.js
 
 ;add region for template
 regions[highlighted] = Highlighted

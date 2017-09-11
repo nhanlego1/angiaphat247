@@ -110,21 +110,21 @@ function getBackground()
     return $background;
 }
 
-function agp_getValue($data, $key, $value_default = '')
-{
-    if (is_null($data) || empty($data)) {
-        return $value_default;
-    }
-    $sub_fields = explode('.', $key);
-    foreach ($sub_fields as $k) {
-        if (is_array($data)) {
-            $data = isset($data[$k]) ? ($data[$k]) : $value_default;
-        } elseif (is_object($data)) {
-            $data = isset($data->{$k}) ? ($data->{$k}) : $value_default;
-        } else {
-            $data = $value_default;
-            break;
-        }
-    }
-    return $data;
-}
+//function agp_getValue($data, $key, $value_default = '')
+//{
+//    if (is_null($data) || empty($data)) {
+//        return $value_default;
+//    }
+//    $sub_fields = explode('.', $key);
+//    foreach ($sub_fields as $k) {
+//        if (is_array($data)) {
+//            $data = isset($data[$k]) ? ($data[$k]) : $value_default;
+//        } elseif (is_object($data)) {
+//            $data = isset($data->{$k}) ? ($data->{$k}) : $value_default;
+//        } else {
+//            $data = $value_default;
+//            break;
+//        }
+//    }
+//    return $data;
+//}

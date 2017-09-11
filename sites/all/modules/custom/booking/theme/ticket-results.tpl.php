@@ -12,7 +12,7 @@
 
 <form action="" method="post" id="booking_ticket_<?php print $ticket_results['type'] ?>" class="booking-ticket-<?php print $ticket_results['type'] ?>" name="booking_ticket_<?php print $ticket_results['type'] ?>">
     <div class="ticket-result">
-        <div class="row">
+        <div class="result">
             <?php if ($ticket_results['first_leg']): ?>
                 <div class="ticket-result-first_leg">
                     <div class="heading">

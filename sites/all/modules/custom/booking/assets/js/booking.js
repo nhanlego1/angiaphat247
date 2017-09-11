@@ -15,7 +15,7 @@ var bookingHelper = (function ($) {
     pub.initICheck = function () {
         jQuery('input[type="radio"].icheck').iCheck({
             checkboxClass: 'icheckbox_flat',
-            radioClass: 'iradio_flat-blue'
+            radioClass: 'iradio_flat-orange'
         });
         if (jQuery('input#booking_type_1_way').is(':checked')) {
            // pub.disableInputID('booking_to');

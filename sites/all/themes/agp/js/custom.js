@@ -420,7 +420,7 @@
 
             //check validate before submit
             $("#booking_ticket").submit(function () {
-                if ($("#booking_ticket_twoway").length) {
+                if ($(".ticket-result-first_leg-twoway").length) {
                     if ($(".oneway-ticket").val() == '') {
                         $(".message-ticket-error p").html('Vui lòng chọn vé chặn đi trước khi đặt vé.');
                         $(".message-ticket-error").show();

@@ -14,7 +14,7 @@
     <div class="ticket-result">
         <div class="result">
             <?php if ($ticket_results['first_leg']): ?>
-                <div class="ticket-result-first_leg">
+                <div class="ticket-result-first_leg ticket-result-first_leg-<?php print $ticket_results['type'] ?>">
                     <div class="heading">
                         <h4><?php print t('Điểm đi') ?>
                             : <?php print _get_code(@agp_getValue($booking_data, 'filter.FromPlaceName')) ?>

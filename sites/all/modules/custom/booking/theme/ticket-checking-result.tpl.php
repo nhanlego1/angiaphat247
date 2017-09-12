@@ -6,7 +6,7 @@
  * Time: 1:59 PM
  */
 ?>
-<div style="display: none" class="messages message-ticket-error error">
+<div id="ticket_message_error" style="display: none" class="messages message-ticket-error error">
     <p>Vui lòng chọn vé trước khi đặt vé. </p>
 </div>
 <div class="ticket-resuls-wrapper">

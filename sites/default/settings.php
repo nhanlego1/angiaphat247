@@ -249,9 +249,9 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'angiaphat247',
-      'username' => 'root',
-      'password' => 'root',
+      'database' => 'angiaphat',
+      'username' => 'nhan',
+      'password' => '@abcd1234',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

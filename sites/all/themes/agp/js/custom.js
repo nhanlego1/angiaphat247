@@ -418,6 +418,39 @@
             }
 
 
+            //check validate before submit
+            $("#booking_ticket").submit(function(){
+                if($("#booking_ticket .ticket-type").val() =='oneway'){
+                    if($(".oneway-ticket").val() ==''){
+                        $(".message-ticket-error").show();
+                        return false;
+                    }
+                }else if($("#booking_ticket .ticket-type").val() =='twoway'){
+                    if($(".oneway-ticket").val() =='' && $(".twoway-ticket").val() ==''){
+                        $(".message-ticket-error").show();
+                        return false;
+                    }else{
+                        if($(".oneway-ticket").val() ==''){
+                            $(".message-ticket-error p").html('Vui lòng chọn vé chặn đi trước khi đặt vé.');
+                            $(".message-ticket-error").show();
+                        }
+                        if($(".twoway-ticket").val() ==''){
+                            $(".message-ticket-error p").html('Vui lòng chọn vé chặn về trước khi đặt vé.');
+                            $(".message-ticket-error").show();
+                        }
+
+                    }
+
+                }else{
+                    $(".message-ticket-error").show();
+                    return false;
+                }
+
+
+            });
+
+
+
         }
     };
 
@@ -432,6 +465,7 @@
         $(".booking-ticket-oneway .ticket-selection").each(function(){
             $(this).change(function(){
                 $(".submit-ticket-result .oneway-ticket").val($(this).val());
+                $(".submit-ticket-result .ticket-type").val('oneway');
             });
         });
 
@@ -447,6 +481,7 @@
         $(".booking-ticket-oneway .ticket-selection").each(function(){
             $(this).change(function(){
                 $(".submit-ticket-result .oneway-ticket").val($(this).val());
+                $(".submit-ticket-result .ticket-type").val('oneway');
             });
         });
 
@@ -459,9 +494,10 @@
             });
         });
 
-        $(".booking-ticket-oneway .ticket-selection").each(function(){
+        $(".booking-ticket-twoway .ticket-selection").each(function(){
             $(this).change(function(){
-                $(".submit-ticket-result .oneway-ticket").val($(this).val());
+                $(".submit-ticket-result .twoway-ticket").val($(this).val());
+                $(".submit-ticket-result .ticket-type").val('twoway');
             });
         });
 
@@ -477,6 +513,7 @@
         $(".booking-ticket-oneway .ticket-selection").each(function(){
             $(this).change(function(){
                 $(".submit-ticket-result .oneway-ticket").val($(this).val());
+                $(".submit-ticket-result .ticket-type").val('oneway');
             });
         });
 
@@ -489,9 +526,10 @@
             });
         });
 
-        $(".booking-ticket-oneway .ticket-selection").each(function(){
+        $(".booking-ticket-twoway .ticket-selection").each(function(){
             $(this).change(function(){
-                $(".submit-ticket-result .oneway-ticket").val($(this).val());
+                $(".submit-ticket-result .twoway-ticket").val($(this).val());
+                $(".submit-ticket-result .ticket-type").val('twoway');
             });
         });
 
@@ -508,6 +546,7 @@
         $(".booking-ticket-twoway .ticket-selection").each(function(){
             $(this).change(function(){
                 $(".submit-ticket-result .twoway-ticket").val($(this).val());
+                $(".submit-ticket-result .ticket-type").val('twoway');
             });
         });
 

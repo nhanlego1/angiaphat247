@@ -6,7 +6,9 @@
  * Time: 1:59 PM
  */
 ?>
-
+<div style="display: none" class="messages message-ticket-error error">
+    <p>Vui lòng chọn vé trước khi đặt vé. </p>
+</div>
 <div class="ticket-resuls-wrapper">
     <div class="depart-info">
         <div class="loading-message-depart">
@@ -30,7 +32,8 @@
     </div>
 
     <div class="submit-ticket-result">
-        <form action="/booking/ticket" method="post">
+        <form id="booking_ticket" action="/booking/ticket" method="post">
+            <input type="hidden" value="" name="ticket_type" class="ticket-type" />
             <input type="hidden" value="" name="oneway_ticket" class="oneway-ticket"/>
             <input type="hidden" value="" name="twoway_ticket" class="twoway-ticket"/>
             <div id="flightselectbt" class=" continue-flight-result scrollDown mt30 mb30">
@@ -38,7 +41,10 @@
                 <input type="submit" value="<?php print t('Đặt vé') ?>" class="booking-submit"/>
             </div>
         </form>
+
     </div>
+
+
 
 </div>
 

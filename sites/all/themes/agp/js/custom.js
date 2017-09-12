@@ -424,16 +424,19 @@
                     if ($(".oneway-ticket").val() == '') {
                         $(".message-ticket-error p").html('Vui lòng chọn vé chặn đi trước khi đặt vé.');
                         $(".message-ticket-error").show();
+                        $('html, body').animate({ scrollTop: $('#ticket_message_error').offset().top }, 'slow');
                         return false;
                     }
                     if ($(".twoway-ticket").val() == '') {
                         $(".message-ticket-error p").html('Vui lòng chọn vé chặn về trước khi đặt vé.');
                         $(".message-ticket-error").show();
+                        $('html, body').animate({ scrollTop: $('#ticket_message_error').offset().top }, 'slow');
                         return false;
                     }
                 } else if ($(".oneway-ticket").val() == '') {
                     $(".message-ticket-error p").html('Vui lòng chọn vé chặn đi trước khi đặt vé.');
                     $(".message-ticket-error").show();
+                    $('html, body').animate({ scrollTop: $('#ticket_message_error').offset().top }, 'slow');
                     return false;
                 }
 

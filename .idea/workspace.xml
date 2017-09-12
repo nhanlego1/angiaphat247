@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12c7ae42-6f21-493a-b48b-acfba7f42e7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-checking-result.tpl.php" afterPath="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-checking-result.tpl.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/ctools/css/64d7d0a3c55866afec0187d45d6e1cfe.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/js/custom.js" afterPath="$PROJECT_DIR$/sites/all/themes/agp/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" />
     </list>
     <ignored path="angiaphat247.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,8 +112,8 @@
       <file leaf-file-name="custom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="444" column="54" selection-start-line="444" selection-start-column="54" selection-end-line="444" selection-end-column="54" />
+            <state relative-caret-position="489">
+              <caret line="437" column="17" selection-start-line="437" selection-start-column="17" selection-end-line="437" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -710,12 +708,12 @@
       <option name="presentableId" value="Default" />
       <updated>1504790046696</updated>
       <workItem from="1504790048998" duration="2608000" />
-      <workItem from="1504879842567" duration="37354000" />
+      <workItem from="1504879842567" duration="37679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39962000" />
+    <option name="totallyTimeSpent" value="40287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -1203,8 +1201,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/custom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="444" column="54" selection-start-line="444" selection-start-column="54" selection-end-line="444" selection-end-column="54" />
+        <state relative-caret-position="489">
+          <caret line="437" column="17" selection-start-line="437" selection-start-column="17" selection-end-line="437" selection-end-column="17" />
           <folding />
         </state>
       </provider>

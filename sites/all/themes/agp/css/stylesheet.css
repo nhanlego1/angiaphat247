@@ -3522,3 +3522,7 @@ ul.list{
 .node-type-product h1.title{
     display: none;
 }
+.region-content-top #bookingForm{
+    background: #75c5ea;
+    padding: 20px;
+}

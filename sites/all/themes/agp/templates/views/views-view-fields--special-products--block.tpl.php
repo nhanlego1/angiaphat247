@@ -28,10 +28,12 @@ $node = node_load($fields['nid']->raw);
                                     Model: <?php print $node->field_model['und'][0]['value'] ?></p>
                             <?php endif; ?>
                             <div class="price">
-                                <?php if (isset($fields['field_price'])): ?>
+                                <?php if (isset($node->field_price[LANGUAGE_NONE]) && $node->field_price[LANGUAGE_NONE][0]['value'] > 0): ?>
                                     <span class="price-new"><?php print $fields['field_price']->content ?></span>
+                                <?php else: ?>
+                                    <a href="/lien-he"><span class="price-new">Liên hệ</span></a>
                                 <?php endif; ?>
-                                <?php if (isset($fields['field_old_price'])): ?>
+                                <?php if (isset($node->field_old_price[LANGUAGE_NONE]) && $node->field_old_price[LANGUAGE_NONE][0]['value'] > 0): ?>
                                     <span class="price-old"><?php print $fields['field_old_price']->content ?></span>
                                 <?php endif; ?>
                             </div>
@@ -65,8 +67,12 @@ $node = node_load($fields['nid']->raw);
             </div>
 
             <div class="price">
-                <span class="price-new"><?php $fields['field_price'] ? print $fields['field_price']->content : print t('Call us') ?></span>
-                <?php if (isset($fields['field_old_price'])): ?>
+                <?php if (isset($node->field_price[LANGUAGE_NONE]) && $node->field_price[LANGUAGE_NONE][0]['value'] > 0): ?>
+                    <span class="price-new"><?php print $fields['field_price']->content ?></span>
+                <?php else: ?>
+                    <a href="/lien-he"><span class="price-new">Liên hệ</span></a>
+                <?php endif; ?>
+                <?php if (isset($node->field_old_price[LANGUAGE_NONE]) && $node->field_old_price[LANGUAGE_NONE][0]['value'] > 0): ?>
                     <span class="price-old"><?php print $fields['field_old_price']->content ?></span>
                 <?php endif; ?>
             </div>

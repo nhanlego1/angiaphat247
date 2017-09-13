@@ -97,95 +97,107 @@
     <div id="container">
         <div class="container">
             <div class="row">
-                <div id="content" class="col-sm-12">
-                    <?php if ($page['content_top']): ?>
-                        <div class="box_html advertising">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <?php print render($page['content_top']) ?>
-                                </div>
+                <?php if ($page['content_top']): ?>
+                    <div class="box_html advertising">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <?php print render($page['content_top']) ?>
                             </div>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (!drupal_is_front_page()): ?>
-                        <!-- Breadcrumb-->
-                        <?php if ($breadcrumb): ?>
-                            <?php print $breadcrumb; ?>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                    <!-- message-->
-                    <?php print $messages; ?>
-                    <!-- title-->
-                    <a id="main-content"></a>
-                    <?php print render($title_prefix); ?>
-                    <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-                    <?php print render($title_suffix); ?>
-                    <!-- tabs-->
-                    <?php if ($tabs): ?>
-                        <div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-                    <?php print render($page['help']); ?>
-                    <!-- links-->
-                    <?php if ($action_links): ?>
-                        <ul class="action-links"><?php print render($action_links); ?></ul>
-                    <?php endif; ?>
-                    <!-- content-->
-                    <?php print render($page['content']); ?>
-                    <?php print $feed_icons; ?>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php if ($page['content_second'] || $page['bottom_right']): ?>
-        <div class="content_bottom">
-            <div class="container">
-                <div class="row">
-                    <?php if ($page['content_second']): ?>
-                        <div class="box_html events">
-                            <div class="col-lg-8">
-                                <?php print render($page['content_second']) ?>
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <?php if ($page['bottom_right']): ?>
-                        <div class="col-lg-4">
-                            <?php print render($page['bottom_right']) ?>
-                        </div>
-                    <?php endif; ?>
-
-
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
-    <?php if ($page['footer_top']): ?>
-        <div class="container">
-            <div class="row">
-                <?php print render($page['footer_top']) ?>
-            </div>
-        </div>
-    <?php endif; ?>
-    <?php if ($page['footer']): ?>
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="footer">
-                            <?php print render($page['footer']) ?>
-                            <div class="clear"></div>
                         </div>
                     </div>
-                </div>
+                <?php endif; ?>
+                <?php if (!drupal_is_front_page()): ?>
+                    <!-- Breadcrumb-->
+                    <?php if ($breadcrumb): ?>
+                        <?php print $breadcrumb; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
+                <!-- message-->
+                <?php print $messages; ?>
+                <!-- title-->
+                <a id="main-content"></a>
+                <?php print render($title_prefix); ?>
+                <?php if ($title): ?><h1 class="title"
+                                         id="page-title"><?php print $title; ?></h1><?php endif; ?>
+                <?php print render($title_suffix); ?>
+                <!-- tabs-->
+                <?php if ($tabs): ?>
+                    <div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+                <?php print render($page['help']); ?>
+                <!-- links-->
+                <?php if ($action_links): ?>
+                    <ul class="action-links"><?php print render($action_links); ?></ul>
+                <?php endif; ?>
+                <!-- content-->
+                <?php if ($page['sidebar_first']): ?>
+                    <aside id="column-left" class="col-sm-3 ">
+                        <?php print render($page['sidebar_first']) ?>
+                    </aside>
+                <?php endif; ?>
+                <?php if ($page['sidebar_first']): ?>
+                <div id="content" class="col-sm-9">
+                    <?php else: ?>
+                    <div id="content" class="col-sm-12">
+                            <?php endif; ?>
+                        <div class="row">
+                            <?php print render($page['content']); ?>
+                            <?php print $feed_icons; ?>
+                        </div>
 
+
+                    </div>
+                </div>
             </div>
-            <div class="copyright">
+        </div>
+        <?php if ($page['content_second'] || $page['bottom_right']): ?>
+            <div class="content_bottom">
                 <div class="container">
-                    Powered By <a href="https://www.angiaphat247.vn">Angiaphat247.vn</a><br> online store © 2017
-                    <!-- [[%FOOTER_LINK]] -->
+                    <div class="row">
+                        <?php if ($page['content_second']): ?>
+                            <div class="box_html events">
+                                <div class="col-lg-8">
+                                    <?php print render($page['content_second']) ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($page['bottom_right']): ?>
+                            <div class="col-lg-4">
+                                <?php print render($page['bottom_right']) ?>
+                            </div>
+                        <?php endif; ?>
+
+
+                    </div>
                 </div>
             </div>
-        </footer>
-    <?php endif; ?>
+        <?php endif; ?>
+        <?php if ($page['footer_top']): ?>
+            <div class="container">
+                <div class="row">
+                    <?php print render($page['footer_top']) ?>
+                </div>
+            </div>
+        <?php endif; ?>
+        <?php if ($page['footer']): ?>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="footer">
+                                <?php print render($page['footer']) ?>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
 
-</div>
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        Powered By <a href="https://www.angiaphat247.vn">Angiaphat247.vn</a><br> online store © 2017
+                        <!-- [[%FOOTER_LINK]] -->
+                    </div>
+                </div>
+            </footer>
+        <?php endif; ?>
+
+    </div>

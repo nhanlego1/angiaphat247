@@ -8,10 +8,10 @@ $node = node_load($fields['nid']->raw);
 ?>
 <li>
     <div class="product-thumb transition">
-        <a class="quickview quickview-latest" rel="group"
-           href="#quickview_latest_<?php print $node->nid ?>"><?php print t('Xem thêm') ?></a>
+        <a class="quickview quickview-special" rel="group"
+           href="#quickview_special_<?php print $node->nid ?>"><?php print t('Xem thêm') ?></a>
         <div class="quick_info">
-            <div id="quickview_latest_<?php print $node->nid ?>">
+            <div id="quickview_special_<?php print $node->nid ?>">
                 <div>
                     <div class="left col-sm-4">
                         <div class="quickview_image image">
@@ -53,7 +53,6 @@ $node = node_load($fields['nid']->raw);
                 </div>
             </div>
         </div>
-        <div class="new_pr">New!</div>
         <div class="image">
             <a href="<?php print url('node/' . $node->nid) ?>">
                 <?php print $fields['field_images']->content; ?>
@@ -76,6 +75,7 @@ $node = node_load($fields['nid']->raw);
                     <span class="price-old"><?php print $fields['field_old_price']->content ?></span>
                 <?php endif; ?>
             </div>
+            <div class="clear"></div>
         </div>
         <div class="cart-button">
             <button class="btn btn-add" type="button"

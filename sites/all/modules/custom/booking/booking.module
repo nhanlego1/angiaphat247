@@ -583,3 +583,23 @@ function summary($str, $limit = 100, $strip = true)
     }
     return trim($str);
 }
+
+/**
+ * @param $view
+ * @param $query
+ */
+function booking_views_query_alter(&$view, &$query) {
+
+    //simple example: change the order of the master display
+    //if you want to do it only  on a certain display add something
+    // like  "&&$view->current_display == 'panel_page_1'"
+
+    if ($view->name == 'relate_products') {
+        $node = menu_get_object('node');
+        $query->where[1]['conditions'][] = array(
+            'field' => 'node.nid',
+            'value' => $node->nid,
+            'operator' => '!='
+        );
+    }
+}

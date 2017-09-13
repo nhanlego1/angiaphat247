@@ -1958,6 +1958,7 @@ aside .box.twitter, aside .box.facebook {
 
 .product-section {
     margin-bottom: 3em;
+    margin-top: 60px;
 }
 
 .product-content-columns {
@@ -1982,8 +1983,6 @@ aside .box.twitter, aside .box.facebook {
     height: 30px;
     width: 30px;
     border-radius: 100%;
-    background: #ccc;
-    color: #fff;
 }
 
 .product-share li a:hover {
@@ -3501,4 +3500,25 @@ label {
 }
 ul.list{
     padding-left: 0;
+}
+.rating .description{
+    display: none;
+}
+.product-grid .btn.details{
+    width: 100%;
+    text-align: center;
+}
+.product-grid .rating{
+    margin: 10px 0;
+}
+.product-thumb .price-new {
+    float: left;
+    margin-bottom: 10px;
+}
+.addtoany_list a{
+    float: left;
+    margin-right: 10px;
+}
+.node-type-product h1.title{
+    display: none;
 }

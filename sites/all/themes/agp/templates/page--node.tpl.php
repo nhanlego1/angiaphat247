@@ -137,9 +137,9 @@
                 <?php if ($page['sidebar_first']): ?>
                 <div id="content" class="col-sm-9">
                     <?php else: ?>
-                    <div id="content" class="col-sm-12">
+                    <div id="content" class="col-sm-12 product_page">
                             <?php endif; ?>
-                        <div class="row">
+                        <div class="row product-content-columns">
                             <?php print render($page['content']); ?>
                             <?php print $feed_icons; ?>
                         </div>

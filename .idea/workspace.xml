@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12c7ae42-6f21-493a-b48b-acfba7f42e7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" afterPath="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php" />
     </list>
     <ignored path="angiaphat247.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views-view-fields--special-products--block.tpl.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views-view-fields--special-products--block.tpl.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
+            <state relative-caret-position="225">
+              <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -65,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/script.js">
+      <file leaf-file-name="views-view-unformatted--special-products--block.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--special-products--block.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4161">
-              <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+            <state relative-caret-position="330">
+              <caret line="27" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,7 +157,6 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-checking-result.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/js/custom.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--san-pham--page-1.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/page--node.tpl.php" />
         <option value="$PROJECT_DIR$/modules/node/node.tpl.php" />
@@ -173,6 +170,7 @@
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--san-pham--page-1.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" />
+        <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php" />
       </list>
     </option>
   </component>
@@ -713,12 +711,12 @@
       <option name="presentableId" value="Default" />
       <updated>1504790046696</updated>
       <workItem from="1504790048998" duration="2608000" />
-      <workItem from="1504879842567" duration="49086000" />
+      <workItem from="1504879842567" duration="49281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51694000" />
+    <option name="totallyTimeSpent" value="51889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -1074,14 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--special-products--block.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--relate-products--block.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1130,14 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1194,6 +1176,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4161">
+          <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1202,10 +1192,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/script.js">
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--special-products--block.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4161">
-          <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+        <state relative-caret-position="330">
+          <caret line="27" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
           <folding />
         </state>
       </provider>

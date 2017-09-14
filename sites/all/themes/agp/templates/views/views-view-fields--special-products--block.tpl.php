@@ -37,9 +37,10 @@ $node = node_load($fields['nid']->raw);
                                     <span class="price-old"><?php print $fields['field_old_price']->content ?></span>
                                 <?php endif; ?>
                             </div>
+                            <div class="clear"></div>
                         </div>
 
-                        <div class="clear"></div>
+
                         <div class="rating">
                             <?php print $fields['field_vote']->content ?>
                         </div>
@@ -76,6 +77,7 @@ $node = node_load($fields['nid']->raw);
                     <span class="price-old"><?php print $fields['field_old_price']->content ?></span>
                 <?php endif; ?>
             </div>
+            <div class="clear"></div>
         </div>
         <div class="cart-button">
             <button class="btn btn-add" type="button"

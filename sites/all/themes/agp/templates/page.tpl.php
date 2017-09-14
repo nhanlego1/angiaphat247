@@ -11,7 +11,7 @@
 
     <nav id="top" class="clearfix">
         <div class="container">
-            <div class="phone hidden-xs hidden-sm">
+            <div class="phone">
                 <?php if ($page['top']): ?>
                     <div class="top-links">
                         <?php print render($page['top']) ?>

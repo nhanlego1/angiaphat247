@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12c7ae42-6f21-493a-b48b-acfba7f42e7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--san-pham--page-1.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--san-pham--page-1.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" afterPath="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php" afterPath="$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" afterPath="$PROJECT_DIR$/sites/angiaphat.phanmemquanli.com/xmlsitemap/NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM/1.xml" />
     </list>
     <ignored path="angiaphat247.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,16 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="3526" column="18" selection-start-line="3526" selection-start-column="18" selection-end-line="3526" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views-view-fields--special-products--block.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,6 +55,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="responsive.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="715" column="30" selection-start-line="715" selection-start-column="30" selection-end-line="715" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4161">
+              <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="booking.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/modules/custom/booking/assets/js/booking.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,19 +85,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views-view-fields--san-pham--page-1.tpl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--san-pham--page-1.tpl.php">
+      <file leaf-file-name="page.tpl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1245">
-              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
-              <folding>
-                <marker date="1505314627000" expanded="true" signature="2096:2141" ph="..." />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views-view-unformatted--san-pham--page-1.tpl.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views-view-unformatted--san-pham--page-1.tpl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--san-pham--page-1.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -117,16 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -150,7 +150,6 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results-vn.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/template.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/js/jquery.carouFredSel-6.2.1-packed.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--new-products--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--special-products--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/agp.info" />
@@ -160,7 +159,6 @@
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-checking-result.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/modules/custom/booking/theme/ticket-results.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/js/custom.js" />
-        <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--special-products--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--san-pham--page-1.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/page--node.tpl.php" />
@@ -173,6 +171,8 @@
         <option value="$PROJECT_DIR$/sites/all/themes/agp/css/stylesheet.css" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-fields--new-products--block.tpl.php" />
         <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/views/views-view-unformatted--san-pham--page-1.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php" />
+        <option value="$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css" />
       </list>
     </option>
   </component>
@@ -713,12 +713,12 @@
       <option name="presentableId" value="Default" />
       <updated>1504790046696</updated>
       <workItem from="1504790048998" duration="2608000" />
-      <workItem from="1504879842567" duration="46354000" />
+      <workItem from="1504879842567" duration="49086000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48962000" />
+    <option name="totallyTimeSpent" value="51694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="729" extended-state="6" />
@@ -987,14 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1066,14 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="141" column="41" selection-start-line="141" selection-start-column="41" selection-end-line="141" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/page--node.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1123,14 +1107,6 @@
           <folding>
             <marker date="1505318824000" expanded="true" signature="13546:13552" ph=" " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,6 +1183,30 @@
           <folding>
             <element signature="e#6#85#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/templates/page.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/css/responsive.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="715" column="30" selection-start-line="715" selection-start-column="30" selection-end-line="715" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sites/all/themes/agp/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4161">
+          <caret line="125" column="51" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

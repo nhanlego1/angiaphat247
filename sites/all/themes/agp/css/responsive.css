@@ -258,10 +258,89 @@
     }
 
     nav#top {
-        float: right;
-        margin-top: 70px;
+        float: left;
+        margin-top: 0px;
         border-bottom: 0;
+        padding: 10px 0;
     }
+    .top-links {
+        float: left;
+        margin-right: 0px!important;
+    }
+    #top ul.menu{
+        padding: 0;
+    }
+
+    .box-right-bottom .select2-container {
+        width: 45%!important;
+        margin-left: 0px;
+        float: left;
+        margin-top: 10px;
+    }
+    .box-right-bottom  .toplace .select2-container {
+        width: 45%!important;
+        margin-left: 20px;
+        float: left;
+    }
+    .fluid_container .camera_caption h1, .fluid_container .camera_caption h2 {
+        font-size: 15px;
+    }
+    .camera_caption {
+        position: absolute;
+        top: 10%!important;
+        left: 20px;
+        text-align: left;
+    }
+    .camera_caption p {
+        margin: 20px 0 20px 0;
+        text-align: left;
+        color: #fff;
+        font-size: 12px!important;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .box-language {
+        margin-top: 5px;
+        padding-bottom: 10px;
+        padding-left: 15px!important;
+    }
+    .box-language .datetime {
+        width: 45%;
+        float: left;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .box-language .datetime:first-child{
+        margin-right: 20px;
+    }
+
+    .box-language .optionMore {
+        width: 90px;
+        float: left;
+        margin-right: 20px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .box-language .optionMore:first-child{
+        margin-left: 0px!important;
+    }
+    .box-language .optionMore:last-child{
+        margin-right: 0px;
+    }
+
+    #bookingForm button.subm {
+        vertical-align: top;
+        display: block;
+        background-color: #f34d63;
+        color: #fff;
+        font-size: 13px;
+        line-height: 15px;
+        padding: 10px 15px;
+        border: 0;
+        margin-left: 36%!important;
+        margin-top: 10px;
+    }
+
 
     #logo {
         margin-top: 90px;
@@ -439,7 +518,7 @@
     .box-right-bottom {
         border: 0;
         float: right;
-        padding: 5px 5px 5px 10px;
+        padding: 5px 5px 10px 15px!important;
         width: 100%;
     }
 
@@ -561,7 +640,7 @@
     }
 
     .fluid_container .camera_caption h1, .fluid_container .camera_caption h2 {
-        font-size: 30px;
+        font-size: 15px;
     }
 
     .fluid_container .camera_caption a {
@@ -618,5 +697,26 @@
 
     .delivery_page .table td, .delivery_page .table th {
         padding: 6px
+    }
+    .tmRadio div {
+        float: left;
+        margin-left: 5px!important;
+        padding-top: 5px;
+    }
+    .box-right-bottom .inbound-outbound select {
+        background-color: #fff;
+        float: left;
+        line-height: 19px;
+        height: 28px;
+        padding: 2px;
+        width: 80px!important;
+        border-radius: 0;
+    }
+    .box-language .optionMore {
+        width: 80px!important;
+        float: left;
+        margin-right: 10px!important;
+        margin-left: 0;
+        margin-top: 10px;
     }
 }

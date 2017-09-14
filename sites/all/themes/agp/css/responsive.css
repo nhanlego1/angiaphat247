@@ -725,6 +725,17 @@ margin-left: 20px;
         float: none;
         margin: 0 0 20px;
     }
+    .ticket-result .price {
+        width: 19%;
+        height: 15px;
+        text-align: center;
+        padding-top: 13px;
+        padding-left: 10px;
+        color: #f34d63;
+        font-weight: bold;
+        font-size: 12px;
+        display: inline-block;
+    }
 
     .fluid_container .camera_caption {
         padding-top: 3%;

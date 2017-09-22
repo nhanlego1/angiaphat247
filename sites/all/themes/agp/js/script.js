@@ -105,13 +105,13 @@
                 });
 
                // $(document).ready(function () {
-                    $('column').find('.box-category .menu  li li a').prepend('<i class="fa fa-angle-right "></i>');
-                    $('#content').find('ul.list li a').prepend('<i class="fa fa-angle-right "></i>');
-                    $('.site-map-page #content ').find(' ul li a').prepend('<i class="fa fa-angle-right "></i>');
-                    $('.manufacturer-content ').find(' div>a').prepend('<i class="fa fa-angle-right "></i>');
+                  //  $('column').find('.box-category .menu  li li a').prepend('<i class="fa fa-angle-right "></i>');
+                   // $('#content').find('ul.list li a').prepend('<i class="fa fa-angle-right "></i>');
+                   // $('.site-map-page #content ').find(' ul li a').prepend('<i class="fa fa-angle-right "></i>');
+                   // $('.manufacturer-content ').find(' div>a').prepend('<i class="fa fa-angle-right "></i>');
                    // $('footer .footer_box ').find(' li a').prepend('<i class="fa fa-chevron-right"></i>');
-                    $('#tm_menu div > ul > li > ul  ').find(' li>a').prepend('<i class="fa fa-chevron-right"></i>');
-                    $('.box.info .box-content ul li  ').find('a').prepend('<i class="fa fa-chevron-right"></i>');
+                   // $('#tm_menu div > ul > li > ul  ').find(' li>a').prepend('<i class="fa fa-chevron-right"></i>');
+                   // $('.box.info .box-content ul li  ').find('a').prepend('<i class="fa fa-chevron-right"></i>');
                // });
                 (function ($) {
                     $.fn.equalHeights = function (minHeight, maxHeight) {
